@@ -13,8 +13,11 @@ public class Main {
         ReentrantLock lock = new ReentrantLock();
         int nThreads = Runtime.getRuntime().availableProcessors();
         ExecutorService executor = Executors.newFixedThreadPool(nThreads);
-        executor.submit(() -> task(lock, latch));
-        executor.submit(() -> task(lock, latch));
+        for (int i = 0; i < 2; i++) {
+            executor.submit(() -> task(lock, latch));
+            
+        }
+        
        
         
         try {
