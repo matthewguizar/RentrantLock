@@ -1,0 +1,1 @@
+Eliminating Race Conditions(Where memory is accessed by two or more threads). Updating the counter variable with the two threads leads to error and using reentrant lock. Reentry lock makes it so that threads wait their turn instead of simultaneously. Locking code eliminates race conditions and enforces thread safety.
